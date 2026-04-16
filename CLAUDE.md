@@ -1,5 +1,17 @@
 # LocalLoop API — Agent Guide
 
+## Git workflow
+
+Always branch before coding. Never commit without explicit user approval.
+Full rules: see `## Git workflow` in the root `CLAUDE.md`.
+
+```
+□ On a feature branch? → git checkout -b <type>/<slug>
+□ User approved changes? → show diff and wait before committing
+```
+
+---
+
 ## What this project is
 
 The NestJS backend for LocalLoop — a proximity-based group chat app.
@@ -9,15 +21,15 @@ Handles authentication, user management, group discovery, chat, and DMs.
 
 ## Documentation
 
-Full architecture, API contracts, data model, and ADRs live in the
-[localloop-shared](https://github.com/andreyviktor/localloop-shared) repo under `docs/`.
+All docs live in `localloop-shared/docs/` and are loaded automatically via the root `CLAUDE.md`.
+If you launched Claude from this repo directly, read them at `../localloop-shared/docs/`.
 
 Key files:
-- `docs/architecture.md` — Clean Architecture pattern and module structure
-- `docs/api-contracts.md` — All endpoint contracts
-- `docs/data-model.md` — Database schema
-- `docs/prd.md` — Business rules (source of truth)
-- `docs/status.md` — Current project state and pending work
+- `../localloop-shared/docs/architecture.md` — Clean Architecture pattern and module structure
+- `../localloop-shared/docs/api-contracts.md` — All endpoint contracts
+- `../localloop-shared/docs/data-model.md` — Database schema
+- `../localloop-shared/docs/prd.md` — Business rules (source of truth)
+- `../localloop-shared/docs/status.md` — Current project state and pending work
 
 ## Repository structure
 
@@ -39,8 +51,8 @@ src/
 
 ## How to start any task
 
-1. Read `docs/status.md` in localloop-shared — understand where the project is
-2. Read the relevant section of `docs/prd.md` for the feature
+1. Read `../localloop-shared/docs/status.md` — understand where the project is
+2. Read the relevant section of `../localloop-shared/docs/prd.md` for the feature
 3. Present a plan before writing any code
 4. Implement layer by layer (domain → application → infra → presentation)
 
