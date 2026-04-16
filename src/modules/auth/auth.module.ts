@@ -10,6 +10,7 @@ import { UserTypeORMRepository } from './infra/repositories/user.typeorm.reposit
 
 import { ExchangeGoogleTokenUseCase } from './application/use-cases/exchange-google-token/exchange-google-token.use-case';
 import { ExchangeAppleTokenUseCase } from './application/use-cases/exchange-apple-token/exchange-apple-token.use-case';
+import { RefreshTokenUseCase } from './application/use-cases/refresh-token/refresh-token.use-case';
 
 import { AuthController } from './presentation/auth.controller';
 import { JwtStrategy } from './infra/strategies/jwt.strategy';
@@ -32,6 +33,7 @@ import { SupabaseService } from '@/shared/supabase/supabase.service';
   providers: [
     ExchangeGoogleTokenUseCase,
     ExchangeAppleTokenUseCase,
+    RefreshTokenUseCase,
     JwtStrategy,
     SupabaseService,
     {
